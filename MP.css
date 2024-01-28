@@ -1,0 +1,238 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(236, 197, 0);
+    color: #fff;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li a{
+    display: inline-block;
+    padding: 15px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+nav .logo{
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #86b904;
+    padding: 15px;
+}
+nav .openmenu{
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+}
+nav ul .closemenu{
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width:700px) {
+    body{
+        color: #fff;
+        background-color: #1b1a1a;
+    }
+    nav ul{
+        height: 65vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background-color: #ecc500;
+        display: none;
+    }
+    nav .openmenu{
+        display: block;
+        margin: 20px;
+    }
+    nav .mainmenu .closemenu{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        display: block;
+    }
+    #banner{
+        box-sizing: border-box;
+        padding: 0 5px;
+    }
+    #banner{
+        width: 100%;
+        height: 300px;
+        background-color: #fff;
+    }
+    #banner img{
+        width: 100%;
+        height: 100%;
+        max-height: fit-content;
+    }
+    #marquee{
+        display: none;
+    }
+    .about{
+        width: 100%;
+        height: 700px;
+        box-sizing: border-box;
+        padding: 0 5%;
+        position: relative;
+        margin-top: 10%;
+        margin-bottom: 20%;
+    }
+    .about h3{
+        padding: 10px;
+        text-align: center;
+    }
+    .about img{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .about span{
+        margin-top: 20px;
+        display: block;
+    }
+    .about a button{
+        color: #fff;
+        background-color: #ecc500;
+        border: none;
+        padding: 10px 50px;
+        position: absolute;
+        left: 33%;
+        bottom: 0;
+        margin: 5% 0;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+    .about a button:hover{
+        box-shadow: 3px 2px 15px 10px #000000;
+        border-radius: 1em;
+    }
+    #recents{
+       width: 100%;
+       height: 60vh;
+       text-align: center;
+       font-size: 2em;
+       padding-bottom: 20%;
+       padding-top: 20%;
+    }
+    #recents .item-box{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 30px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        box-sizing: border-box;
+        padding: 30px;
+        overflow: hidden;
+    }
+    .item{
+        width: 300px;
+        height: 100%;
+        background-color: #000000;
+        scroll-snap-align: center;
+        display: flex;
+       border-radius: 1em;
+       padding: 0 150px;
+    }
+    #myTeam{
+        margin-top: 15%;
+        width: 100%;
+        height: 70vh;
+        background-color: #000000;
+        padding: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    #myTeam h3{
+        font-size: 2em;
+        text-align: center;
+        display: block;
+    }
+    #myTeam #team-board{
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        display: inline-flex;
+        gap: 20px;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        overflow-x: scroll;
+        scroll-snap-type: X mandatory;
+    }
+    #staffs{
+        height: 100%;
+        width: 200px;
+        background-color: #ecc500;
+        display: block;
+        padding: 5px 10px;
+        border-radius: 1em;
+        scroll-snap-align: center;
+        transition: all .3s ease-in-out;
+        position: relative;
+        text-align: left;
+    }
+    #staffs:hover{
+        transform: scalex(1.2);
+        margin: 0 20px;
+        background-color: #ecc500d1;
+    }
+    #staffs button{
+        position: absolute;
+        bottom: 25px;
+        padding: 5px 25px;
+        font-weight: bolder;
+        background-color: #0cec00;
+        border: none;
+        left: 45px;
+        cursor: pointer;
+    }
+    #staff-img{
+        width: 200px;
+        height: 330px;
+        border-radius: 2em;
+        background-color: #1b1a1a;
+    }
+    #staff-info{
+        width: 180px;
+        height: 150px;
+        background-color: #ffffff17;
+        position: absolute;
+        top: 180px;
+        margin-left: 10px;
+        color: #fff;
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: left;
+        border-radius: 0 0 2em 2em;
+    }
+    #staff-info{
+        font-size: 14px;
+    }
+    #staff-info .name{
+        color: #0cec00;
+        font-size: 1.8em;
+    }
+    #staff-info h3, h4{
+        font-size: 1.3em;
+        text-align: left;
+    }
+
+}
